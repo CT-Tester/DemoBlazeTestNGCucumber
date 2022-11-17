@@ -43,10 +43,7 @@ import main.WebDriverSettings;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		
-		//features = {"src/test/resources/functionalTests"},
-		features = {"src/test/resources/FeatureFiles/Search_Wikipedia_TestNg.feature"},
-		//features = {"src/test/resources/FeatureFiles_Feature/LoginCWB_Feature.feature"},
+		features = {"src/test/resources/FeatureFiles/Search_DemoBlaze_TestNg.feature"},
 		glue= {"stepDefinitions"},
 		plugin = { "pretty", "html:Test_report", "json:target/cucumber-report/cucumber.json"},
 		monochrome = true

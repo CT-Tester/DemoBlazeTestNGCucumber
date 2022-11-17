@@ -14,16 +14,15 @@ CONTENTS OF THIS FILE
  ----------------
  
  This package contains all the necessary files to execute the test project for Selenium - Cucumber. 
- The tests consists on one test case. The script opens a new browser session, that opens the Google.es page and set "automatización" in the search input control.
- When Google completes the search, the sript looks for the Spanish Wikipedia entry in the list and opens it. Finally, the script goes to the section "Historia temprana"
- and takes one screenshot. This screenshot is stored in the Cluecumber html report that you can find in the folder "./target/Test_report".
+ The tests consists on one test case. The script opens a new browser session, that opens Demoblaze page, loks for the "Sony vaio i5" and "Dell i7 8gb" laptops and adds them to the cart.
+ Then the code deletes the laptop "Dell i7 8gb" from the cart.
+ Finally, check the current price of the chart, fill all the mandatory fields, check the order ID and compare the price displayed in the cart to the one present in the order summary.
+
+
+ The test includes a Cluecumber report that is located in the folder ./targer/Test-report.To see the report, open the file "index.html" in your web browser.
+ The last step of every single test include an screenshot. To see the screenshot, go to the last step of the report and click on the link "Toogle".
  
- To see the screenshot go to the last step of the report and click on the link "Toogle".
- 
- Finally, this project was initially planned to use Selenium Grid. Due to time constrains and a non-resolved bug, the project was reconverted to Selenium Webdriver.
- it will be generated a new version of the project with Selenium Grid RemoteDriver for the future.
- 
- -IMPORTANT NOTE-: To check how the code works, we recommend to delete the folder "./target/Test_report", BUT I have kept it to demonstrate how the code is working in my machines, 
+ -IMPORTANT NOTE-: To check how the code works, we recommend to delete the folder "./target/Test_report", BUT I have kept it to demonstrate how the code is working in my machine, 
  in case that a non expected issue appears in your machine.
  
  -1. Requeriments
@@ -41,7 +40,7 @@ CONTENTS OF THIS FILE
  -2. Recommended modules
  -----------------------
  In addition to the previous point, we recommend to check if you have installed the following modules before to run the test project:
- 	-If you are planning to run this test in chrome web browser and windows operative system, it is mandatory to have previously installed the version 106.0.5249.119
+ 	-If you are planning to run this test in chrome web browser and windows operative system, it is mandatory to have previously installed the Google Chrome version 106.0.5249.119
  	-It is mandatory to install java jdk 1.8.0. After that, we need to set the environment variable JAVA_HOME with the path to the folder where we have installed this java package.
  	-In addition to the previous point, we recommend to check the run configuration in your Eclipse IDE and be assured that you are using this Java jdk version.
  	-It is mandatory to install the Apache Maven 3.8.6. You can download it in this link: https://maven.apache.org/download.cgi
@@ -51,7 +50,7 @@ CONTENTS OF THIS FILE
  -3. Installation
  ----------------
  To execute this project import it to your IntellIJ Idea or Eclipse development environment tool. Then, you can execute it, doing a right click button on the pom.xml file
- and selecting the option "Run as/Maven test".
+ and selecting the option "Run as/Maven test", or using maven console and the command "mvn test".
  
  You can also doing a right click on ./src/test/resources/Test_Suites/Test_Report.html and select the option "Run as/TestNG suite".
  
